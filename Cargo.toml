@@ -1,5 +1,5 @@
 [package]
-name = "tensorflow-serving-tonic"
+name = "tensorflow_serving_tonic"
 version = "0.1.0"
 edition = "2021"
 authors = ["marco.seravalli@gmail.com"]
@@ -9,7 +9,10 @@ repository = "https://github.com/mseravalli/tensorflow-serving-tonic"
 build = "build.rs"
 include = ["**/*.proto"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "tensorflow_serving_tonic"
+path = "src/lib.rs"
+bench = false
 
 [dependencies]
 prost = "0.10"
